@@ -1,4 +1,4 @@
-# AngularJS crip core module
+# Crip Angular core module
 
 For more details [see demo repository](https://github.com/crip-angular/demo)
 
