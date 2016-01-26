@@ -1,0 +1,27 @@
+{
+  "name": "crip-angular-core",
+  "version": "1.0.0",
+  "description": "AngularJS crip core module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crip-angular/core.git"
+  },
+  "keywords": [
+    "angular",
+    "boilerplate"
+  ],
+  "author": "Igors Krasjukovs <tahq69@gmail.com> (https://github.com/tahq69)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crip-angular/core/issues"
+  },
+  "homepage": "https://github.com/crip-angular/core#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "cripweb": "^1.0.0"
+  }
+}

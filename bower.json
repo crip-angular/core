@@ -1,0 +1,23 @@
+{
+  "name": "crip-angular-core",
+  "version": "1.0.0",
+  "description": "AngularJS crip core module",
+  "main": "index.js",
+  "authors": [
+    "Igors Krasjukovs <tahq69@gmail.com> (https://github.com/tahq69)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "boilerplate"
+  ],
+  "homepage": "https://github.com/crip-angular/core",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
