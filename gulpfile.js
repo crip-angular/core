@@ -1,12 +1,11 @@
 var gulp = require('gulp'),
     cripweb = require('cripweb');
 
-
 cripweb.scripts([
         '**/*.module.js',
         '**/*.js'
     ],
-    'angular-script-core',
+    'crip-core',
     'scripts',
     'resources',
     'build');
