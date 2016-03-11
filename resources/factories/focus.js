@@ -12,10 +12,14 @@
             // e.g. click events that need to run before the focus or
             // inputs elements that are in a disabled state but are enabled when those events
             // are triggered.
-            $timeout(function() {
+            $timeout(function () {
                 var $element = $(selector);
-                if($element.length === 1)
-                    $element.focus(callback);
+                if ($element.length === 1) {
+                    if (typeof callback === 'function')
+                        $element.focus(callback);
+                    else
+                        $element.focus();
+                }
             });
         }
     }
