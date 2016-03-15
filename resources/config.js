@@ -1,4 +1,4 @@
-(function (ng, crip, Array, String) {
+(function (ng, crip, Array, String, Number) {
     'use strict';
 
     crip.core
@@ -11,6 +11,7 @@
         Array.prototype.removeItem = removeItem;
 
         String.prototype.supplant = supplant;
+        Number.prototype.toBytes = toBytes;
 
         ng.extend(ng, {
             isEmpty: isEmpty,
@@ -74,5 +75,18 @@
                 }
             );
         }
+
+        /**
+         * Convert Number to user friendly string
+         * @returns {string}
+         */
+        function toBytes() {
+            this.value = this;
+            this.size = Math.log(this) / Math.log(1e3) | 0;
+            this.num = (this / Math.pow(1e3, this.size)).toFixed(2);
+            this.text = (this.size ? ('kMGTPEZY'[--this.size] + 'B') : 'Bytes');
+
+            return '{num} {text}'.supplant(this);
+        }
     }
-})(angular, window.crip || (window.crip = {}), Array, String);
+})(angular, window.crip || (window.crip = {}), Array, String, Number);

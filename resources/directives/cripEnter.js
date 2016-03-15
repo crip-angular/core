@@ -26,7 +26,7 @@
             // Removes bound events in the element itself
             // when the scope is destroyed
             scope.$on('$destroy', function () {
-                element.off(attrs.cFocus);
+                element.off(attrs.cripEnter);
             });
         }
     }
