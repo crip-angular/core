@@ -120,6 +120,7 @@
          * @returns {string}
          */
         function toBytes(holder) {
+            holder = holder || (holder = {});
             holder.value = this;
             holder.size = Math.log(holder.value) / Math.log(1e3) | 0;
             holder.num = (holder.value / Math.pow(1e3, holder.size)).toFixed(2);
