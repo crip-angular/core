@@ -1,4 +1,4 @@
-(function (ng, crip, Array, String, Number, Math) {
+(function (ng, crip, Array, String, Number, Math, RegExp) {
     'use strict';
 
     crip.core
@@ -11,6 +11,7 @@
         Array.prototype.removeItem = removeItem;
 
         String.prototype.supplant = supplant;
+        String.prototype.replaceAll = stringReplaceAll;
         Number.prototype.toBytes = toBytes;
 
         ng.extend(ng, {
@@ -128,5 +129,17 @@
 
             return '{num} {text}'.supplant(holder);
         }
+
+        /**
+         * Replace all occurrences in string
+         *
+         * @param {string} searchValue Used in RegExp
+         * @param {string|function} replaceValue
+         * @returns {string}
+         */
+        function stringReplaceAll(searchValue, replaceValue) {
+            var target = this;
+            return target.replace(new RegExp(searchValue, 'g'), replaceValue);
+        }
     }
-})(angular, window.crip || (window.crip = {}), Array, String, Number, Math);
+})(angular, window.crip || (window.crip = {}), Array, String, Number, Math, RegExp);
