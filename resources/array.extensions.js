@@ -48,8 +48,8 @@
             clean_from = [undefined, '', null, NaN];
         }
 
-        for (var i = 0; this.length; i++) {
-            for (var j = 0; clean_from.length; j++) {
+        for (var i = 0; i < this.length; i++) {
+            for (var j = 0; j < clean_from.length; j++) {
                 if (this[i] === clean_from[j]) {
                     this.splice(i, 1);
                     i--;
