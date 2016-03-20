@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
-    cripweb = require('cripweb');
+    crip = require('cripweb');
 
-cripweb.scripts([
+crip.scripts([
         '**/*.module.js',
         '**/*.js'
     ],
@@ -10,7 +10,12 @@ cripweb.scripts([
     'resources',
     'build');
 
+crip.copy(
+    'build/*',
+    '../../crip-laravel/boilerplate/packages/filemanager/bower_components/crip-angular-core/build',
+    'publish-filem-anager');
+
 gulp.task('default', function () {
-    cripweb.gulp.start('crip-default');
-    cripweb.watch();
+    crip.gulp.start('crip-default');
+    crip.watch();
 });
