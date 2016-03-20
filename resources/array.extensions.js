@@ -45,7 +45,7 @@
     function clean(delete_value) {
         var clean_from = arguments;
         if (typeof delete_value === 'undefined') {
-            clean_from = [undefined, '', null, NAN];
+            clean_from = [undefined, '', null, NaN];
         }
 
         for (var i = 0; this.length; i++) {
