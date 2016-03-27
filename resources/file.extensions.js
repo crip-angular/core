@@ -11,6 +11,7 @@
         ng.extend(ng, {
             isFile: isFile,
             isImage: isImage,
+            isHtml5: !!(File && FormData),
             fileSupport: !!($window.FileReader && $window.CanvasRenderingContext2D)
         });
 
