@@ -7,7 +7,7 @@ crip.scripts([
     ],
     'crip-core',
     'scripts',
-    'resources',
+    'src',
     'build');
 
 crip.copy(
