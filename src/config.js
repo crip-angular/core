@@ -11,7 +11,8 @@
         ng.extend(ng, {
             isEmpty: isEmpty,
             hasValue: hasValue,
-            hasProperty: hasProperty
+            hasProperty: hasProperty,
+            nodesToArray: nodesToArray
         });
 
         /**
@@ -61,6 +62,22 @@
             }
 
             return true;
+        }
+
+        /**
+         * Annoying method to copy nodes to an array, thanks to IE
+         *
+         * @param {Node} [nodes]
+         * @returns {Array}
+         */
+        function nodesToArray(nodes) {
+            nodes = nodes || [];
+
+            var results = [];
+            for (var i = 0; i < nodes.length; ++i) {
+                results.push(nodes.item(i));
+            }
+            return results;
         }
     }
 })(angular, window.crip || (window.crip = {}), Array, String, Number, Math, RegExp);
